@@ -1,26 +1,26 @@
 <?php
-// الاتصال بقاعدة البيانات
+
 $conn = mysqli_connect("127.0.0.1", "root", "", "eapt");
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// معالجة إدخال البيانات عند إرسال النموذج
+
 $message = "";
 if (isset($_POST['register'])) {
     $name = mysqli_real_escape_string($conn, $_POST['user_name']);
     $email = mysqli_real_escape_string($conn, $_POST['user_email']);
-    $password = password_hash($_POST['user_password'], PASSWORD_DEFAULT); // تشفير كلمة المرور
+    $password = password_hash($_POST['user_password'], PASSWORD_DEFAULT); 
 
-    // التحقق مما إذا كان البريد الإلكتروني موجودًا بالفعل
+   
     $check_email = "SELECT * FROM users WHERE user_email = '$email'";
     $result = mysqli_query($conn, $check_email);
 
     if (mysqli_num_rows($result) > 0) {
         $message = "This email is already registered!";
     } else {
-        // إضافة المستخدم الجديد
+        
         $sql = "INSERT INTO users (user_name, user_email, user_password) 
                 VALUES ('$name', '$email', '$password')";
         if (mysqli_query($conn, $sql)) {
