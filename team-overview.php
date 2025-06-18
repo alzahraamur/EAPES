@@ -2,14 +2,14 @@
 session_start();
 require_once 'include/db_config.php';
 
-// Check if user is logged in and is a manager
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'manager') {
     header('Location: login.php');
     exit;
 }
 
 try {
-    // Fetch team statistics
+    
     $stats = $pdo->prepare("
         SELECT 
             COUNT(*) as total_employees,
@@ -22,7 +22,7 @@ try {
     $stats->execute();
     $teamStats = $stats->fetch(PDO::FETCH_ASSOC);
 
-    // Fetch team members with their latest reports
+    
     $stmt = $pdo->prepare("SELECT u.user_id, u.username , COUNT(r.report_id) as total_reports
         FROM users u
         LEFT JOIN reports r ON u.user_id = r.staff_id
