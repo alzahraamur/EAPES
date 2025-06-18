@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $password = $_POST['password'];
 
-    // Validate input
+    
     if (empty($username) || empty($password)) {
         $_SESSION['error'] = "All fields are required";
         header('Location: register.php');
