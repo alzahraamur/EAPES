@@ -2,7 +2,7 @@
 session_start();
 require_once 'include/db_config.php';
 
-// Check if user is logged in and is a manager
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'manager') {
     header('Location: login.php');
     exit;
@@ -98,6 +98,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-// If not POST request, redirect back
+
 header('Location: Add-report.php');
 exit;
