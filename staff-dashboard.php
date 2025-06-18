@@ -2,13 +2,13 @@
 session_start();
 require_once 'include/db_config.php';
 
-// Check if user is logged in and is a staff member
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'staff') {
     header('Location: login.php');
     exit;
 }
 
-// Fetch staff member's information
+
 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
 $stmt->execute([$_SESSION['user_id']]);
 $staff = $stmt->fetch();
