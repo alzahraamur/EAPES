@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.logo img {
+    width: 40px; /* حجم الشعار */
+    height: auto;
+    transform: scale(4);
+    justify-content: right;
+    vertical-align: middle; /* محاذاة الشعار بشكل جيد */
+}
+
+.Navigation a{
+color: #3a6cf4;
+text-decoration: none;
+font-size: 1.1em;
+font-weight: 500;
+padding-left: 30px;
+}
+.Navigation a:hover{
+    color: #601cfc;
+
+}
+section {
+    padding: 100px 200px;
+}
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; /* يرفع النص للأعلى */
+    justify-content: flex-start; /* يجعل النص في اليسار */
+    background: url(images/pexels-a-darmel-8133880.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 50px 50px; /* تقليل الـ padding العلوي لرفع النص */
+}
+
+.main div {
+    text-align: left; /* يجعل جميع النصوص داخل div محاذية لليسار */
+    margin-top: 100px; /* يمكنك تعديل هذه القيمة لرفع النص أكثر */
+}
+
+.main h2 {
+    color: #0400ff;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+
+.main h3{
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: rgba(4, 0, 255, 0.6); /* blue with 60% transparency */
+    padding: 2px 5px; /* Reduce padding to make highlight smaller */
+    display: inline;
+}
+
+.main-btn{
+    color: #fff;
+    background-color: #29006b;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 40px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+
+}
+.main-btn:hover{
+    background-color: #29006b;
+    transform: scale(1.1 ,1.1);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0; 
+}
+
+.container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background: #fff;
+        border-radius: 30px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); 
+        margin-top: 60px; /* Add space between navbar and container */
+    }
+    .wrapper { /* Assuming your container is inside a wrapper */
+        padding-top: 50px; /* Adjust this value as needed */
+    }
+.form-box{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 114%;
+    background: rgb(0, 0, 3);
+    display: flex;
+    align-items: center;
+    color: #ffcc00;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+
+}
+form{
+    width: 100%;
+}
+
+.container h1{
+    font-size: 36px;
+    margin: 2px 0;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px 50px 13px 20px;
+    background: #eee;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+}
+.input-box input::placeholder{
+    color:#888;
+    font-weight: 400;
+}
+
+.input-box i{
+    position:absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+
+}
+.remember-forgot{
+    margin: -15px 0 15px;
+    text-align: left;
+}
+.remember-forgot a{
+    font-size: 14px;
+    color: #0400ff;
+    
+}
+a:active {
+    color: #FF5733; /* اختر اللون الذي تريده */
+}
+.Accept{
+    margin: -15px 0 15px;
+    text-align: left;
+}
+.Accept a{
+    font-size: 14px;
+    color: #0400ff;
+    
+}
+.HaveAccount-link{
+    margin: -15px 0 15px;
+    text-align:left;
+}
+.HaveAccount-link a{
+    font-size: 13px;
+    color: #000000;
+    text-decoration: none;
+}
+.register-option {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #ffcc00;
+}
+
+.register-option p {
+    margin: 10px 0;
+}
+
+.register-option a {
+    color: #0400ff; /* Gold color for better visibility */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-option a:hover {
+    text-decoration: underline;
+}
+a:active {
+    color: #FF5733; /* اختر اللون الذي تريده */
+}
+.btn{
+    width: 100%;
+    height: 48px;
+    background: #0400ff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border: none;
+    cursor:pointer;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+
+}
+.container p{
+    font-size: 14.5px;
+    margin: 15px 0;
+
+}
+.button {
+    margin: 10px 0;
+    
+}
+
+.button button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    border-radius: 20px;
+    
+
+}
+
+.button button:nth-child(1) {
+    background-color: #0400ff;
+    color: white;
+}
+.button button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+/* تنسيق الحاوية الرئيسية للأخبار */
+.news-slider {
+    position: relative;
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+}
+
+.news-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: rgb(0, 0, 3);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.about-section {
+    padding: 120px 200px;
+    background: url('images/about-bg.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content {
+    background: rgb(0, 0, 3); /* Dark overlay */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    text-align: center;
+}
+
+.about-content h2 {
+    color: #ffcc00;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-content h3 {
+    color: #3a6cf4;
+    margin-top: 15px;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.about-content ul li i {
+    color: #ffcc00;
+    margin-right: 10px;
+}
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.Navigation a {
+    color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.Navigation a:hover, .Navigation .active {
+    color: #601cfc;
+    font-weight: bold;
+}
+
+/* Contact Page Styling */
+.contact-section {
+    padding: 120px 200px;
+    background: url('images/contact-bg.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Contact Info Box */
+.contact-info-box {
+    background: rgb(0, 0, 3);
+    padding: 30px;
+    border-radius: 10px;
+    width: 45%;
+}
+
+.contact-info-box h2 {
+    color: #ffcc00;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    color: #ffcc00;
+    font-size: 1em;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+/* Contact Form Box */
+.contact-form-box {
+    background: rgb(0, 0, 3);
+    padding: 30px;
+    border-radius: 10px;
+    width: 45%;
+}
+
+.contact-form-box h2 {
+    color: #ffcc00;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1em;
+}
+
+.contact-form button {
+    background-color: #3a6cf4;
+    color: white;
+    padding: 12px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #601cfc;
+}
+/* تعيين خلفية للصفحة */
+.select-section {
+    padding: 120px 200px;
+    background: url('images/select-bg.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
+}
+
+/* حاوية اختيارات */
+.select-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px; /* تعيين الحد الأقصى للعرض */
+    width: 100%;
+    justify-content: center;
+}
+
+/* صندوق اختيار الحساب */
+.select-form-box {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px; /* زيادة الحشو داخل البوكس */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px; /* تعيين الحد الأقصى للعرض */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* مركز البوكس */
+}
+
+/* عنوان الصندوق */
+.select-form-box h2 {
+    color: #FFD700; /* اللون الذهبي */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* تصميم الفورم */
+.select-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* زيادة المسافة بين العناصر */
+}
+
+/* تصميم حقل الاختيارات */
+.select-form select {
+    width: 100%;
+    padding: 15px; /* زيادة الحشو داخل الـ select */
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2em; /* زيادة حجم الخط */
+    background: #333; /* خلفية داكنة */
+    color: #fff; /* النص باللون الأبيض */
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5); /* تأثير الضوء الذهبي */
+}
+
+.select-form select:hover {
+    background: #444; /* تغير اللون عند المرور */
+}
+
+/* زر التأكيد */
+.select-form button {
+    background-color: #3a6cf4; /* اللون الأزرق */
+    color: white;
+    padding: 15px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف على الزر */
+}
+
+/* تأثير hover على الزر */
+.select-form button:hover {
+    background-color: #601cfc; /* اللون الأرجواني عند المرور */
+}
+
+/* تأثير التركيز على الـ select والـ button */
+.select-form select:focus,
+.select-form button:focus {
+    outline: none;
+    border: 2px solid #3a6cf4; /* تمييز المدخل بالأزرق عند التركيز */
+}
+
+
+

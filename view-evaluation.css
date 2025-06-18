@@ -1,0 +1,168 @@
+.evaluation-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  color: var(--secondary-color);
+  margin-top: 0.5rem;
+}
+
+.evaluation-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.evaluation-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.evaluation-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.eval-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.eval-meta h3 {
+  margin-bottom: 0.25rem;
+}
+
+.eval-date {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+.eval-grade {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.eval-grade.excellent {
+  background: #d1fae5;
+  color: #059669;
+}
+.eval-grade.good {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+.eval-grade.satisfactory {
+  background: #fef3c7;
+  color: #d97706;
+}
+.eval-grade.needsimprovement {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.eval-evaluator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.eval-summary {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.eval-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-view {
+  background: var(--primary-color);
+  color: white;
+}
+
+.no-evaluations {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-evaluations i {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  margin: 5% auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 8px;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .eval-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .eval-grade {
+    align-self: flex-start;
+  }
+
+  .eval-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
