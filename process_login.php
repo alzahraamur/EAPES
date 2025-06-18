@@ -29,12 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit;
             }
         } else {
-            echo "<p style='color:red'>❌ كلمة المرور غير صحيحة.</p>";
+            echo "<p style='color:red'>❌ Password is incorrect.</p>";
         }
     } else {
-        echo "<p style='color:red'>❌ البريد الإلكتروني غير موجود.</p>";
+        echo "<p style='color:red'>❌ Email not found.</p>";
     }
 } else {
-    echo "<p style='color:red'>❌ الطلب غير صحيح.</p>";
+    echo "<p style='color:red'>❌ The request is invalid.</p>";
 }
 ?>
