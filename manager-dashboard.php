@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'manager') {
 }
 
 
-// Fetch manager's information
+
 $stmt = $pdo->prepare("SELECT username FROM users WHERE user_id = ?");
 $stmt->execute([$_SESSION['user_id']]);
 $manager = $stmt->fetch();
