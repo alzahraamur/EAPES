@@ -2,18 +2,18 @@
 session_start();
 require_once 'include/db_config.php';
 
-// التحقق من الجلسة والصلاحية
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'head_of_section') {
     header('Location: login.php');
     exit;
 }
 
-// جلب موظفي القسم
+
 $stmt = $pdo->prepare("SELECT id, name FROM users WHERE role = 'staff' AND department_id = (SELECT department_id FROM users WHERE id = ?)");
 $stmt->execute([$_SESSION['user_id']]);
 $staffList = $stmt->fetchAll();
 
-// معالجة الإرسال
+
 $success = '';
 $error = '';
 
