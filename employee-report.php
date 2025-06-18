@@ -2,13 +2,13 @@
 session_start();
 require_once 'include/db_config.php';
 
-// Check if user is logged in and is a manager
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'manager') {
     header('Location: login.php');
     exit;
 }
 
-// Fetch all reports with employee details
+
 try {
     $stmt = $pdo->prepare("
         SELECT r.*, 
@@ -106,7 +106,7 @@ try {
         </div>
     </main>
 
-    <!-- Report View Modal -->
+  
     <div id="reportModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
