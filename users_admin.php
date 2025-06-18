@@ -2,7 +2,7 @@
 session_start();
 include '../include/db_config.php';
 
-// التأكد أن المستخدم مدير
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'manager') {
     header("Location: ../login.php");
     exit;
@@ -10,10 +10,10 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'manager') {
 
 $currentPage = 'admin';
 
-// جلب الأقسام
+
 $departments = $pdo->query("SELECT * FROM departments ORDER BY name ASC")->fetchAll();
 
-// تحديث بيانات المستخدم
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_id'], $_POST['new_role'], $_POST['new_department_id'])) {
     $id = $_POST['user_id'];
     $new_role = $_POST['new_role'];
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_id'], $_POST['ne
     exit;
 }
 
-// جلب المستخدمين مع الأقسام
+
 $users = $pdo->query("
     SELECT u.*, d.name AS department_name 
     FROM users u 
@@ -91,7 +91,7 @@ $users = $pdo->query("
     <div class="container">
         <h1 class="page-title">User Management</h1>
 
-        <!-- زر إضافة مستخدم جديد -->
+       
         <a href="add_new_user.php" class="add-user-btn">
             <i class="bx bx-user-plus"></i> Add New User
         </a>
