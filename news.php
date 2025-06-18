@@ -33,7 +33,7 @@ $currentPage = 'news';
     <main class="main-section">
         <div class="container">
 
-            <!-- زر إضافة خبر -->
+            
             <div style="text-align: right; margin-bottom: 20px;">
                 <a href="addNews.php" class="btn" style="background-color: #3A6CF4; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
                     <i class="fas fa-plus-circle"></i> Add News
