@@ -2,14 +2,14 @@
 session_start();
 require_once 'include/db_config.php';
 
-// 🛡️ تأكد من تسجيل الدخول
+
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
 }
 
 try {
-    // ✅ جلب تقارير الموظف
+  
     $stmt = $pdo->prepare("
         SELECT r.*, u.name
         FROM reports r
@@ -48,7 +48,7 @@ include 'include/navbar.php';
     </button>
 </div>
 
-        <!-- Header -->
+        
         <div class="header-actions">
     <div class="search-box" style="display: inline-flex; align-items: center; margin-right: 10px;">
         <i class="bx bx-search" style="margin-right: 5px;"></i>
@@ -64,14 +64,14 @@ include 'include/navbar.php';
 </div>
 
 
-        <!-- Error -->
+       
         <?php if (isset($error)): ?>
             <div class="alert alert-error">
                 <i class="bx bx-error-circle"></i> <?= $error ?>
             </div>
         <?php endif; ?>
 
-        <!-- Reports -->
+       
         <div class="reports-container">
             <?php if (empty($reports)): ?>
                 <div class="no-reports">
@@ -119,7 +119,7 @@ include 'include/navbar.php';
     </div>
 </main>
 
-<!-- Modal -->
+
 <div id="reportModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
