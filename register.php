@@ -19,16 +19,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($password !== $confirm_password) {
         $error_message = 'Passwords do not match.';
     } else {
-        // Check if email already exists
+        
         $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE email = ?");
         $stmt->execute([$email]);
         if ($stmt->fetchColumn() > 0) {
             $error_message = 'Email is already registered.';
         } else {
-            // Hash the password
+            
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            // Insert user with pending_approval role
+            
             $stmt = $pdo->prepare("INSERT INTO users (name, email, password, role, requested_role) VALUES (?, ?, ?, 'pending_approval', ?)");
             if ($stmt->execute([$name, $email, $hashed_password, $requested_role])) {
                 $success_message = '✅ Registration successful! Waiting for manager approval.';
