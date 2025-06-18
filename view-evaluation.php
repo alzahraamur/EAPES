@@ -2,14 +2,14 @@
 session_start();
 require_once 'include/db_config.php';
 
-// 🛡️ تأكد من أن المستخدم مسجل دخول
+
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
 }
 
 try {
-    // ✅ جلب التقارير الخاصة بهذا الموظف
+   
     $stmt = $pdo->prepare("
         SELECT report_id, title, status, evaluation, evaluator_comment, evaluation_score, created_at, content
         FROM reports
