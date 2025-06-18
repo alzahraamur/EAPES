@@ -2,18 +2,18 @@
 session_start();
 require_once 'include/db_config.php';
 
-// تأكد من تسجيل الدخول وأن المستخدم head_of_section
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'head_of_section') {
     header('Location: login.php');
     exit;
 }
 
-// جلب بيانات الـ head
+
 $stmt = $pdo->prepare("SELECT name, department_id FROM users WHERE id = ?");
 $stmt->execute([$_SESSION['user_id']]);
 $head = $stmt->fetch();
 
-// جلب اسم القسم
+
 $dept_name = '';
 if ($head && $head['department_id']) {
     $stmt = $pdo->prepare("SELECT name FROM departments WHERE id = ?");
@@ -22,23 +22,22 @@ if ($head && $head['department_id']) {
     $dept_name = $dept ? $dept['name'] : 'N/A';
 }
 
-// إحصائيات القسم
-// عدد الموظفين
+
 $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE role = 'staff' AND department_id = ?");
 $stmt->execute([$head['department_id']]);
 $staff_count = $stmt->fetchColumn();
 
-// عدد التقارير المضافة
+
 $stmt = $pdo->prepare("SELECT COUNT(*) FROM reports WHERE department_id = ?");
 $stmt->execute([$head['department_id']]);
 $total_reports = $stmt->fetchColumn();
 
-// عدد التقارير المعلقة
+
 $stmt = $pdo->prepare("SELECT COUNT(*) FROM reports WHERE department_id = ? AND status = 'pending'");
 $stmt->execute([$head['department_id']]);
 $pending_reports = $stmt->fetchColumn();
 
-// عدد التقارير المقيمة
+
 $stmt = $pdo->prepare("SELECT COUNT(*) FROM reports WHERE department_id = ? AND status = 'evaluated'");
 $stmt->execute([$head['department_id']]);
 $evaluated_reports = $stmt->fetchColumn();
