@@ -2,13 +2,13 @@
 session_start();
 require_once 'include/db_config.php';
 
-// تحقق من تسجيل الدخول والصلاحيات
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'head_of_section') {
     header('Location: login.php');
     exit;
 }
 
-// جلب تقارير الموظفين
+
 $stmt = $pdo->prepare("
     SELECT r.*, u.name AS staff_name
     FROM reports r
