@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// الاتصال بقاعدة البيانات
+
 $conn = mysqli_connect("127.0.0.1", "root", "", "eatpe");
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -65,14 +65,14 @@ include 'include/navbar.php';
                             <i class="fas fa-phone"></i>
                             <div class="info-content">
                                 <h3>Phone</h3>
-                                <p>+968 1234 5678</p>
+                                <p>+968 92062824</p>
                             </div>
                         </div>
                         <div class="contact-info">
                             <i class="fas fa-envelope"></i>
                             <div class="info-content">
                                 <h3>Email</h3>
-                                <p>support@eatpes.com</p>
+                                <p>EATPAS@email.com</p>
                             </div>
                         </div>
                     </div>
