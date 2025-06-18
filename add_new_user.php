@@ -2,7 +2,7 @@
 session_start();
 include '../include/db_config.php';
 
-// تحقق أن المستخدم مدير
+
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'manager') {
     header("Location: ../login.php");
     exit;
