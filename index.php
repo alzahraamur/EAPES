@@ -11,7 +11,7 @@ include "include/base.php";
     ?>
 
     <main class="main-section">
-        <!-- Hero Section -->
+       
         <section class="hero">
             <div class="hero-content">
                 <h1 class="hero-title">Welcome to Your Website</h1>
@@ -20,7 +20,7 @@ include "include/base.php";
             </div>
         </section>
 
-        <!-- CTA Section -->
+        
         <section class="cta-section">
             <div class="container">
                 <h2>Ready to Get Started?</h2>
