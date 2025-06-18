@@ -1,5 +1,5 @@
 <?php
-// لتحديد مسار الشعار بناءً على موقع الصفحة
+
 $logoPath = (strpos($_SERVER['PHP_SELF'], 'admin/') !== false) ? '../images/Black_White_Bold_Modern_Studio_Logo-removebg-preview.png' : 'images/Black_White_Bold_Modern_Studio_Logo-removebg-preview.png';
 ?>
 
@@ -135,7 +135,7 @@ $logoPath = (strpos($_SERVER['PHP_SELF'], 'admin/') !== false) ? '../images/Blac
 }
 </style>
 <?php
-if (!isset($currentPage)) $currentPage = ''; // منع التحذير
+if (!isset($currentPage)) $currentPage = ''; 
 $inAdmin = strpos($_SERVER['PHP_SELF'], '/admin/') !== false;
 $basePath = $inAdmin ? '../' : '';
 ?>
