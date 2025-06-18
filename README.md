@@ -16,3 +16,8 @@ Technologies Used
 
  Author
 Alzahra ALharthi
+
+
+Manager account to approve new users :
+Email: admin@example.com
+Password: 12341234Aa
