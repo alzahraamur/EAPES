@@ -7,12 +7,12 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'head_of_section') {
     exit;
 }
 
-// ✅ جلب department_id الخاص بالـ head_of_section
+
 $stmt = $pdo->prepare("SELECT department_id FROM users WHERE id = ?");
 $stmt->execute([$_SESSION['user_id']]);
 $department_id = $stmt->fetchColumn();
 
-// ✅ جلب الإحصائيات
+
 $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE role = 'staff' AND department_id = ?");
 $stmt->execute([$department_id]);
 $teamMembers = $stmt->fetchColumn();
