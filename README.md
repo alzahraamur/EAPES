@@ -15,4 +15,4 @@ Technologies Used
 - HTML, CSS
 
  Author
-Alzahra ALharthy
+Alzahra ALharthi
