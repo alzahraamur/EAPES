@@ -2,18 +2,18 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// الاتصال بقاعدة البيانات الصحيحة
+
 $conn = mysqli_connect("127.0.0.1", "root", "", "eatpe");
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// إنشاء مجلد الصور إذا لم يكن موجودًا
+
 if (!file_exists('images')) {
     mkdir('images', 0777, true);
 }
 
-// إضافة خبر جديد
+
 if (isset($_POST['add_news'])) {
    $title = mysqli_real_escape_string($conn, $_POST['title']);
 $desc = mysqli_real_escape_string($conn, $_POST['content']);
@@ -39,7 +39,7 @@ $desc = mysqli_real_escape_string($conn, $_POST['content']);
     }
 }
 
-// حذف خبر
+
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     $sql = "DELETE FROM news WHERE id = $id";
